@@ -1,15 +1,47 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   background-color: #F6F6F1;
+ 
+}
+body{
+  margin: 0px;
+}
+p{
+  margin: 0px;
+  cursor: default;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+#app{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 39px;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  height: 50px;
+  box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.2);
+}
+.jules{
+  justify-content: left;
+  display: flex;
+
+
+}
+.options{
+  display: flex;
+  margin-left: auto;
+}
+.options > p{
+  margin-right: 20px;
+  cursor: pointer;
+
+}
+.julesImg{
+  width: 45px;
+  height: 35px;
+  background-image:url(/public/jules.png);
+  background-size:contain;
 }
