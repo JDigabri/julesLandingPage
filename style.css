@@ -6,6 +6,7 @@
 }
 body{
   margin: 0px;
+  overflow-x: hidden;
 }
 p{
   margin: 0px;
@@ -44,4 +45,58 @@ p{
   height: 35px;
   background-image:url(/public/jules.png);
   background-size:contain;
+}
+
+.hero{
+  background-image: url(/public/aaa.png) ;
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100vw;
+  height: 1000px;
+  background-position-x: -50px;
+  display: flex;
+}
+
+.downloadCont{
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+.sell{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 3vw;
+  margin-top: 12vw;
+  margin-left: 8vw;
+}
+
+.sell > p {
+  width: 30vw;
+  font-weight: 400;
+  font-size: .9vw;
+  margin-top: 15px;
+
+}
+
+.downloadBut{
+  width: 15vw;
+  height: 3vw;
+  margin-top: 15px;
+  background-size: contain;
+  background-image: url(/public/download.png);
+
+}
+
+.demo{
+  height: 25vw;
+  width: 35vw;
+  margin-top: 9vw;
+  margin-left: auto;
+  margin-right: 8vw;
+  background-size: contain;
+  box-shadow: 10px 10px 10px 2.5px rgba(0, 0, 0, 0.2);
+
+  background-image: url(public/julesclient.png);
 }
