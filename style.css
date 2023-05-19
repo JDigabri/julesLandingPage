@@ -211,12 +211,54 @@ p{
     background-image: url(public/julesclient.png);
   }
   
+  .sectionOne {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column-reverse;
+  }
+  
+  .sectionOneImg {
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    height: 350px;
+    width: 481px;
+    background-size: 100%;
+    order: 1;
+    background-position-x: -30px;
+  }
+  
+  .sectionOneText {
+    width: 70%;
+    margin-right: 0px;
+    order: 2;
+    margin-left: 0px;
+  }
+
 
 }
 
 @media (max-width: 347px) {
   body{
    display: none;
+  }
+  .sectionOne {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  .sectionOneImg {
+    margin-left: 0;
+    margin-bottom: 15px;
+  }
+  
+  .sectionOneText {
+    width: 100%;
+    margin-right: 0;
   }
 
 }
