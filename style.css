@@ -25,6 +25,11 @@ p{
   height: 50px;
   box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.2);
 }
+.cont{
+  display: flex;
+  flex-direction: column;
+
+}
 .jules{
   justify-content: left;
   display: flex;
@@ -53,7 +58,7 @@ p{
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100vw;
-  height: 1000px;
+  height: 50vw;
   background-position-x: -50px;
   display: flex;
 }
@@ -86,7 +91,6 @@ p{
   margin-top: 15px;
   background-size: contain;
   background-image: url(/public/download.png);
-
 }
 
 .demo{
@@ -100,7 +104,37 @@ p{
   background-image: url(public/julesclient.png);
 }
 
-@media (max-width: 600px) {
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.sectionOne{
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
+.sectionOneImg{
+  background-image: url(/public/owncus.png);
+  height: 374px;
+  width: 600px;
+  margin-left: 15vw;
+  background-repeat: none;
+
+}
+.sectionOneText{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  width: 25vw;
+  margin-right: 15vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
   body{
     margin: 0px;
     overflow-x: hidden;
@@ -122,7 +156,8 @@ p{
     background-image: url(/public/aaa.png) center repeat-x;
     margin: 0px;
     background-repeat: no-repeat;
-    background-size: 120% 100%;
+    background-size: 110% 100%;
+    background-position-x: 15px;
     width: 100vw;
     height: 500px;
     background-position-x: -50px;
