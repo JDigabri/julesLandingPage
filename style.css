@@ -114,6 +114,14 @@ p{
   justify-content: center;
   align-items: center;
 }
+.sectionTwo{
+  display: flex;
+  flex-direction: row-reverse;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBEBEB;
+}
 .sectionOneImg{
   background-image: url(/public/owncus.png);
   height: 374px;
@@ -121,6 +129,32 @@ p{
   margin-left: 15vw;
   background-repeat: none;
 
+}
+.sectionTwoImg{
+  background-image: url(/public/selldev.png);
+  height: 320px;
+  width: 400px;
+  background-size: 100% 100%;
+  margin-left: 15vw;
+  background-repeat: none;
+
+}
+.sectionThreeImg{
+  background-image: url(/public/jtom.png);
+  height: 199px;
+  width: 646px;
+  background-size:100% 100% ;
+  margin-left: 15vw;
+  background-repeat: none;
+
+}
+.sectionTwoText{
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .sectionOneText{
   display: flex;
@@ -234,6 +268,39 @@ p{
   }
   
   .sectionOneText {
+    width: 70%;
+    margin-right: 0px;
+    order: 2;
+    margin-left: 0px;
+  }
+
+  .sectionTwo {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column-reverse;
+  }
+  
+  .sectionTwoImg {
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    height: 275px;
+    width: 350px;
+    background-size: 100% 100%;
+    order: 1;
+  }
+  .sectionThreeImg {
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    height: 140px;
+    width: 375px;
+    background-size: 100% 100%;
+    order: 1;
+  }
+  .sectionTwoText {
     width: 70%;
     margin-right: 0px;
     order: 2;
