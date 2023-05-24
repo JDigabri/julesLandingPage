@@ -133,7 +133,7 @@ p{
   text-align: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
   body{
     margin: 0px;
     overflow-x: hidden;
@@ -174,18 +174,22 @@ p{
     justify-items: center;
   }
   .sell{
+    width: 100%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 28px;
+    font-size: 2rem;
     margin-top: 50px;
     margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .sell > p {
-    width: 300px;
+    width: 70%;
     font-weight: 400;
-    font-size: 9px;
+    font-size: .7rem;
     margin-top: 15px;
   
   }
@@ -200,13 +204,12 @@ p{
   }
   
   .demo{
-    
-    height: 330px;
-    width: 300px;
+    height: 400px;
+    width: 330px;
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    background-size: contain;
+    background-size: 100% 100%;
     box-shadow: 10px 10px 10px 2.5px rgba(0, 0, 0, 0.2);
     background-image: url(public/julesclient.png);
   }
@@ -223,9 +226,9 @@ p{
     margin-left: 0px;
     margin-bottom: 20px;
     margin-top: 20px; 
-    height: 350px;
-    width: 481px;
-    background-size: 100%;
+    height: 275px;
+    width: 350px;
+    background-size: 100% 100%;
     order: 1;
     background-position-x: -30px;
   }
@@ -237,51 +240,13 @@ p{
     margin-left: 0px;
   }
 }
-@media (max-width: 347px) {
-  body{
-    margin: 0px;
-    overflow-x: hidden;
-    padding: 0px;
-  }
-  
-  #app {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 39px;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    height: 50px;
-    box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.2);
-  }
 
 
-  
-  .sectionOne {
-    flex-direction: column;
-    height: auto;
-    text-align: center;
-    padding: 10px;
-    flex-direction: column-reverse;
-  }
 
-  .sectionOneImg {
-    margin-left: 0px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    height: 200px;
-    width: 300px;
-    background-size: 100%;
-    order: 1;
-  }
+@media (max-width: 350px) {
 
-  .sectionOneText {
-    width: 90%;
-    margin-right: 0px;
-    order: 2;
-    margin-left: 0px;
-  }
+*{
+  display:none;
+}
 
 }
