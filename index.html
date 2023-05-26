@@ -60,7 +60,86 @@
         </div>  
       </div>
     </div>
+    <div class="scrollableSection">
+      <div class="thermometer">
+        <div class="bar"></div>
+        <div class="bar2"></div>
+        <div class="button active" id="button1"></div>
+        <div class="button inactive" id="button2"></div>
+        <div class="button inactive" id="button3"></div>
+        <div class="button inactive" id="button4"></div>
+      </div>
+      <div class="content visible" id="content1">
+        <h2>Content 1</h2>
+        <p>This is the content for button 1.</p>
+      </div>
+      <div class="content" id="content4">
+        <h2>Content 4</h2>
+        <p>This is the content for button 4.</p>
+      </div>
+      <div class="content" id="content3">
+        <h2>Content 3</h2>
+        <p>This is the content for button 3.</p>
+      </div>
+      <div class="content" id="content2">
+        <h2>Content 2</h2>
+        <p>This is the content for button 2.</p>
+      </div>
+
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script type="module" src="/main.js"></script>
-  </div>
+    <script>
+      const buttons = document.querySelectorAll('.button');
+      const contents = document.querySelectorAll('.content');
+  
+      buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          buttons.forEach((button, i) => {
+            if (i <= index) {
+              button.classList.remove('inactive');
+              button.classList.add('active');
+            } else {
+              button.classList.remove('active');
+              button.classList.add('inactive');
+            }
+          });
+  
+          contents.forEach((content) => {
+            content.classList.remove('visible');
+          });
+  
+          const content = document.querySelector(`#content${index + 1}`);
+          content.classList.add('visible');
+  
+          const bar = document.querySelector('.bar');
+          const barHeight = (index + 1) * 22 + '%';
+  
+          gsap.to(bar, { height: barHeight });
+        });
+      });
+  
+      // Show content 1 and set button 1 as active by default
+      const content1 = document.querySelector('#content1');
+      const button1 = document.querySelector('#button1');
+      content1.classList.add('visible');
+      button1.classList.add('active');
+  
+      // Reset buttons and content when a previous button is clicked
+      buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          buttons.forEach((btn, i) => {
+            if (i > index) {
+              btn.classList.remove('active');
+              btn.classList.add('inactive');
+            } else {
+              btn.classList.remove('inactive');
+              btn.classList.add('active');
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
