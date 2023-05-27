@@ -279,7 +279,11 @@ p{
 }
 
 .imageContainer {
-margin-top: 50px;
+  margin-top: 50px;
+  background-image: url("/public/Laptop.png");
+  height: 630px;
+  width: 1200px;
+  background-size: 100% 100%;
 }
 
 
@@ -290,17 +294,9 @@ margin-top: 50px;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-.LaptopDownload .downloadBut{
-  width: 15vw;
-  height: 3vw;
-  margin-top: 15px;
-  border: 0;
   margin-bottom: 50px;
-  cursor:pointer;
-
 }
+
 @media (max-width: 1200px) {
   body{
     margin: 0px;
@@ -498,7 +494,33 @@ margin-top: 50px;
     align-items: center;
     background-color: #EBEBEB;
   }
+  .imageContainer {
+    margin-top: 50px;
+    background-image: url("/public/Laptop.png");
+    height: 50vw;
+    width: 50vh;
+    background-size: 100% 100%;
+  }
+  .content > p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 50px;
+    width: 60vw;
+    text-align: center;
+  }
+  .active {
+    background-color: #5C43F5;
+    
   
+  }
+  
+  .inactive {
+    background-color: #B6AAFF;
+  
+  }
   
 }
 
