@@ -166,15 +166,6 @@ p{
   text-align: center;
 }
 
-.scrollableSection {
-  display: flex;
-  flex-direction: row;
-  height: 1000px;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-  background-color: #EBEBEB;
-}
 
 .scrollableSection {
   display: flex;
@@ -191,10 +182,11 @@ p{
   flex-direction: column;
   align-items: center;
   position: relative;
-  height: 500px;
+  height: 800px;
   width: 40px;
   margin: 0 20px;
-  gap: 100px;
+  margin-top: 150px;
+  gap: 165px;
 }
 
 .bar {
@@ -203,7 +195,7 @@ p{
   left: 50%;
   transform: translateX(-50%);
   background-color: #5C43F5;
-  width: 4px;
+  width: 6px;
   height: 0%;
 
 }
@@ -213,14 +205,14 @@ p{
   left: 50%;
   transform: translateX(-50%);
   background-color: #B6AAFF;
-  width: 4px;
+  width: 6px;
   height: 90%;
   opacity: 0.5;
 }
 
 .button {
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #B6AAFF;
   margin-bottom: 10px;
@@ -230,21 +222,53 @@ p{
 
 .active {
   background-color: #5C43F5;
+  
+
 }
 
 .inactive {
-  background-color: #ccc;
+  background-color: #B6AAFF;
+
 }
 
 .content {
   display: none;
   margin: 10px;
   padding: 20px;
-  background-color: #fff;
 }
 
+.content > h2{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2vw;
+  line-height: 39px;
+  margin-bottom: 10px;
+
+}
+.content > p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2vw;
+  line-height: 39px;
+  margin-bottom: 50px;
+  width: 40vw;
+  text-align: center;
+}
+.content1Img{
+  background-image: url("/public/julesclient.png");
+  width: 903px;
+  height: 600px;
+  background-size: 100% 100%;
+  box-shadow: 10px 10px 10px 2.5px rgba(0, 0, 0, 0.2);
+
+}
 .visible {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -405,7 +429,7 @@ margin-top: 50px;
     margin-left: 0px;
     margin-bottom: 20px;
     margin-top: 20px; 
-    height: 140px;
+    height: 120px;
     width: 375px;
     background-size: 100% 100%;
     order: 1;
@@ -416,7 +440,66 @@ margin-top: 50px;
     order: 2;
     margin-left: 0px;
   }
+  .thermometer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 500px;
+    width: 40px;
+    margin: 0px;
+    gap: 100px;
+  }
+  
+  .bar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5C43F5;
+    width: 4px;
+    height: 0%;
+  
+  }
+  .bar2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #B6AAFF;
+    width: 4px;
+    height: 90%;
+    opacity: 0.5;
+  }
+  
+  .button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #B6AAFF;
+    margin-bottom: 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .content1Img{
+    background-image: url("/public/julesclient.png");
+    height: 200px;
+    width: 275px;
+    background-size: 100% 100%;
+    box-shadow: 10px 10px 10px 2.5px rgba(0, 0, 0, 0.2);
 
+  }
+  .scrollableSection {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBEBEB;
+  }
+  
+  
 }
 
 
