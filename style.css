@@ -246,6 +246,37 @@ p{
 .visible {
   display: block;
 }
+
+
+.LaptopSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+margin-top: 50px;
+}
+
+
+
+.LaptopDownload{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.LaptopDownload .downloadBut{
+  width: 15vw;
+  height: 3vw;
+  margin-top: 15px;
+  border: 0;
+  margin-bottom: 50px;
+  cursor:pointer;
+
+}
 @media (max-width: 1200px) {
   body{
     margin: 0px;
@@ -385,6 +416,7 @@ p{
     order: 2;
     margin-left: 0px;
   }
+
 }
 
 
