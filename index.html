@@ -24,16 +24,51 @@
     </div>
     <div class="container"> 
 
-    <div class = "hero">
-      <div class = "downloadCont">
-        <div class = 'sell'>Sell Unplayed Games
-          <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
-          <div class = "downloadBut"></div>
+      <div class="hero">
+        <div class="downloadCont">
+          <div class="sell">Sell Unplayed Games
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</p>
+            <div class="downloadBut"></div>
+          </div>
         </div>
+        <div class="demo">
+          <div class="notification">
+          </div>
+        </div>
+
       </div>
-      <div class = "demo"></div>
-    </div>
-    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+ 
+      
+      <script>
+      const demo = document.querySelector('.demo');
+      const notification = document.querySelector('.notification');
+
+      function showNotification() {
+        const newNotification = document.createElement('div');
+        newNotification.className = 'notification';
+        demo.appendChild(newNotification);
+        gsap.set(newNotification, { y: '-100%', opacity: 1 }); // Start position
+        gsap.to(newNotification, { y: '0%', duration: 0.5 });
+        gsap.delayedCall(5, hideNotification, [newNotification]); // Wait for 3 seconds and then hide the notification
+      }
+
+      function hideNotification(notification) {
+        gsap.to(notification, { y: '-100%', opacity: 0, duration: 0.5, onComplete: removeNotification, onCompleteParams: [notification] });
+      }
+
+      function removeNotification(notification) {
+        notification.remove();
+      }
+
+      function repeatAnimation() {
+        gsap.delayedCall(2, showNotification); // Show the notification after 1 second
+        gsap.delayedCall(8, repeatAnimation); // Repeat the animation every 5 seconds (including the visible time)
+      }
+
+    repeatAnimation();
+
+      </script>
     <div class = "howSection">
     
       <div class="sectionOne">
