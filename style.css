@@ -295,7 +295,9 @@ p{
   justify-content: center;
   align-items: center;
 }
-
+.content{
+  text-align: center;
+}
 
 .LaptopSection {
   display: flex;
@@ -329,6 +331,9 @@ p{
     margin: 0px;
     overflow-x: hidden;
     padding: 0px;
+  }
+  .content{
+    text-align: center;
   }
   #app{
     font-family: 'Inter';
