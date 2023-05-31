@@ -192,3 +192,586 @@
           </div>
   </body>
 </html>
+
+
+<style>
+  
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #F6F6F1;
+ 
+}
+body{
+  margin: 0px;
+  overflow-x: hidden;
+}
+p{
+  margin: 0px;
+  cursor: default;
+}
+
+#app{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 39px;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  height: 50px;
+  box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.2);
+}
+.cont{
+  display: flex;
+  flex-direction: column;
+
+}
+.jules{
+  justify-content: left;
+  display: flex;
+
+
+}
+.options{
+  display: flex;
+  margin-left: auto;
+}
+.options > p{
+  margin-right: 25px;
+  cursor: pointer;
+
+}
+.julesImg{
+  width: 45px;
+  height: 35px;
+  background-image:url(/public/jules.png);
+  background-size:contain;
+}
+
+.hero{
+  background-image: url(/public/aaa.png) ;
+  margin: 0px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100vw;
+  height: 50vw;
+  background-position-x: -50px;
+  display: flex;
+  position: relative;
+  z-index: -2;
+
+}
+
+
+.downloadCont{
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+.sell{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3vw;
+  margin-top: 12vw;
+  margin-left: 8vw;
+}
+
+.sell > p {
+  width: 30vw;
+  font-weight: 300;
+  font-size: .9vw;
+  margin-top: 15px;
+
+}
+
+.downloadBut{
+  width: 15vw;
+  height: 3vw;
+  margin-top: 15px;
+  background-size: contain;
+  background-image: url(/public/download.png);
+}
+
+.demo{
+  height: 25vw;
+  width: 35vw;
+  margin-top: 9vw;
+  margin-left: auto;
+  margin-right: 8vw;
+  background-size: contain;
+  box-shadow: 10px 10px 10px 2.5px rgba(0, 0, 0, 0.2);
+  background-image: url(public/julesclient.png);
+  position: relative;
+  overflow: hidden;
+}
+
+.notification {
+  position: absolute;
+  top: 0;
+  left: 55%;
+  width: 12.5vw;
+  height: 4vw;
+  background-image: url(public/notif.png);
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin-left: 15px;
+  margin-top: 15px;
+  opacity: 0;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+.sectionOne{
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 10vw;
+}
+.sectionTwo{
+  display: flex;
+  flex-direction: row-reverse;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBEBEB;
+}
+.sectionOneImg{
+  background-image: url(/public/owncus.png);
+  height: 374px;
+  width: 590px;
+  background-repeat: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionTwoImg{
+  background-image: url(/public/selldev.png);
+  height: 320px;
+  width: 400px;
+  background-size: 100% 100%;
+  margin-left: 15vw;
+  background-repeat: none;
+
+}
+.sectionThreeImg{
+  background-image: url(/public/jtom.png);
+  height: 199px;
+  width: 646px;
+  background-size:100% 100% ;
+  background-repeat: none;
+
+}
+.sectionTwoText{
+  display: flex;
+  flex-direction: column;
+  width: 25vw;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.sectionOneText{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+.scrollableSection {
+  display: flex;
+  flex-direction: row;
+  height: 1000px;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #EBEBEB;
+}
+
+.thermometer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  height: 800px;
+  width: 40px;
+  margin: 0 20px;
+  margin-top: 150px;
+  gap: 165px;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #5C43F5;
+  width: 6px;
+  height: 0%;
+
+}
+.bar2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #B6AAFF;
+  width: 6px;
+  height: 90%;
+  opacity: 0.5;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #B6AAFF;
+  margin-bottom: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.active {
+  background-color: #5C43F5;
+  
+
+}
+
+.inactive {
+  background-color: #B6AAFF;
+  background-image: url(public/tap.svg);
+  background-size: 70% 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  display: none;
+  margin: 10px;
+  padding: 20px;
+}
+
+.content > h2{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2vw;
+  line-height: 39px;
+  margin-bottom: 10px;
+
+}
+.content > p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.2vw;
+  line-height: 39px;
+  margin-bottom: 50px;
+  width: 40vw;
+  text-align: center;
+}
+.content1Img{
+  background-image: url("/public/julesclient.png");
+  width: 903px;
+  height: 600px;
+  background-size: 100% 100%;
+  box-shadow: 10px 10px 10px 2.5px rgba(0, 0, 0, 0.2);
+
+}
+.visible {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.LaptopSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  body.lock-scroll {
+      overflow: hidden;
+    }
+.imageContainer {
+  margin-top: 50px;
+  background-image: url("/public/Laptop.png");
+  height: 630px;
+  width: 1200px;
+  background-size: 100% 100%;
+}
+
+
+
+.LaptopDownload{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 1200px) {
+  body{
+    margin: 0px;
+    overflow-x: hidden;
+    padding: 0px;
+  }
+  #app{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 39px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 50px;
+    box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.2);
+  }
+  .hero{
+    background-image: url(/public/aaa.png) center repeat-x;
+    margin: 0px;
+    background-repeat: no-repeat;
+    background-size: 110% 100%;
+    background-position-x: 15px;
+    width: 100vw;
+    height: 500px;
+    background-position-x: -50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .downloadCont{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+  }
+  .sell{
+    width: 100%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sell > p {
+    width: 70%;
+    font-weight: 400;
+    font-size: .7rem;
+    margin-top: 15px;
+  
+  }
+  
+  .downloadBut{
+    width: 300px;
+    height: 55px;
+    margin-top: 15px;
+    background-size: contain;
+    background-image: url(/public/download.png);
+  
+  }
+  
+  .demo{
+    height: 400px;
+    width: 330px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-size: 100% 100%;
+    box-shadow: 10px 10px 10px 2.5px rgba(0, 0, 0, 0.2);
+    background-image: url(public/julesclient.png);
+  }
+  
+  .sectionOne {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column-reverse;
+  }
+  
+  .sectionOneImg {
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    height: 275px;
+    width: 350px;
+    background-size: 100% 100%;
+    order: 1;
+    background-position-x: -30px;
+  }
+  
+  .sectionOneText {
+    width: 70%;
+    margin-right: 0px;
+    order: 2;
+    margin-left: 0px;
+  }
+
+  .sectionTwo {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    flex-direction: column-reverse;
+  }
+  
+  .sectionTwoImg {
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    height: 275px;
+    width: 350px;
+    background-size: 100% 100%;
+    order: 1;
+  }
+  .sectionThreeImg {
+    margin-left: 0px;
+    margin-bottom: 20px;
+    margin-top: 20px; 
+    height: 120px;
+    width: 375px;
+    background-size: 100% 100%;
+    order: 1;
+  }
+  .sectionTwoText {
+    width: 70%;
+    margin-right: 0px;
+    order: 2;
+    margin-left: 0px;
+  }
+  .thermometer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 500px;
+    width: 40px;
+    margin: 0px;
+    gap: 100px;
+  }
+  
+  .bar {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5C43F5;
+    width: 4px;
+    height: 0%;
+  
+  }
+  .bar2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #B6AAFF;
+    width: 4px;
+    height: 90%;
+    opacity: 0.5;
+  }
+  
+  .button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #B6AAFF;
+    margin-bottom: 10px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .content1Img{
+    background-image: url("/public/julesclient.png");
+    height: 200px;
+    width: 275px;
+    background-size: 100% 100%;
+    box-shadow: 10px 10px 10px 2.5px rgba(0, 0, 0, 0.2);
+
+  }
+  .scrollableSection {
+    display: flex;
+    flex-direction: row;
+    height: 600px;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #EBEBEB;
+  }
+  .imageContainer {
+    margin-top: 50px;
+    background-image: url("/public/Laptop.png");
+    height: 50vw;
+    width: 50vh;
+    background-size: 100% 100%;
+  }
+  .content > p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 50px;
+    width: 60vw;
+    text-align: center;
+  }
+  .active {
+    background-color: #5C43F5;
+    
+  
+  }
+  
+  .inactive {
+    background-color: #B6AAFF;
+  
+  }
+  .notification {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 160px;
+    height: 55px;
+    background-image: url(public/notif.png);
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    margin-left: 15px;
+    margin-top: 15px;
+    opacity: 0;
+  }
+  
+}
+
+
+
+@media (max-width: 350px) {
+
+*{
+  display:none;
+}
+
+}
+
+</style>
