@@ -10,21 +10,38 @@
     <title>Jules</title>
   </head>
   <body>
-    <div id="app">
+    <div id="app" class="nav-bar">
       <div class = "jules">
         <div class = "julesImg"></div>
         <p style="margin-left:10px"> Jules </p>
       </div>
 
       <div class = "options">
-        <p> Home </p>
-        <p> About </p>
-        <p> Download </p>
+        <p onclick="scrollToSection('hero')"> Home </p>
+        <p onclick="scrollToSection('howSection')"> About </p>
+        <p onclick="scrollToSection('laptopDownload')"> Download </p>
       </div>
     </div>
     <div class="container"> 
-
-      <div class="hero">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script>
+      const navBar = document.querySelector('.nav-bar');
+      let isScrolling = false;
+  
+      window.addEventListener('scroll', () => {
+        navBar.classList.add('show');
+        clearTimeout(isScrolling);
+        isScrolling = setTimeout(() => {
+          navBar.classList.remove('show');
+        }, 2000);
+      });
+  
+      const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        section.scrollIntoView({ behavior: 'smooth' });
+      };
+    </script>
+      <div id = "hero" class="hero">
         <div class="downloadCont">
           <div class="sell">Sell Unplayed Games
             <p>Take Control of Your Game Library.                    
@@ -39,8 +56,6 @@
 
       </div>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
- 
-      
       <script>
       const demo = document.querySelector('.demo');
       const notification = document.querySelector('.notification');
@@ -70,7 +85,7 @@
     repeatAnimation();
 
       </script>
-    <div class = "howSection">
+    <div id = "howSection" class = "howSection">
     
       <div class="sectionOne">
         <div class = "sectionOneImg"></div>
@@ -183,7 +198,7 @@
         });
       });
     </script>
-          <div class="LaptopSection">
+          <div id = "laptopDownload" class="LaptopSection">
             <div class="imageContainer"></div>
             </div>
             <div class="LaptopDownload">
@@ -221,6 +236,9 @@
     align-items: center;
     height: 50px;
     box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    background-color: #F6F6F1;
+    z-index: 999;
   }
   .cont{
     display: flex;
@@ -461,14 +479,15 @@
   }
   
   .content > h2{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 2vw;
-    line-height: 39px;
-    margin-bottom: 10px;
-  
-  }
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 7vw;
+  line-height: 39px;
+  margin-bottom: 10px;
+  width: 50vw;
+
+}
   .content > p{
     font-family: 'Inter';
     font-style: normal;
@@ -545,6 +564,16 @@
   }
   
   @media (max-width: 1200px) {
+    .content > h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    line-height: 39px;
+    margin-bottom: 10px;
+    font-size: 26px;
+    width: 50vw;
+
+}
     body{
       margin: 0px;
       overflow-x: hidden;
