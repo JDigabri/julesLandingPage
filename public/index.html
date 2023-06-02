@@ -59,7 +59,7 @@
       </div>
 <link href="//cdn-images.mailchimp.com/embedcode/classic-071822.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}
+	#mc_embed_signup{display: none;background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif;  width:600px;}
 	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
@@ -244,8 +244,23 @@
             <div class="LaptopDownload">
               <h2>Get Started with Jules Today</h2>
               <p>Join the future of gaming. Download Jules and embark on a new gaming adventure. Buy, play, sell, and take control of your gaming experience. It's time to game your way. </p>
-            <div class="downloadBut"></div>
+            <div class="downloadBut" onclick="newsletterForm()"></div>
           </div>
+    <script>
+       // Get a reference to the download button and newsletter form
+       const downloadBut = document.querySelector('.downloadBut');
+      const newsletterForm = document.getElementById('mc_embed_signup');
+
+      // Add a click event listener to the download button
+      downloadBut.addEventListener('click', () => {
+        // Toggle the display style of the newsletter form
+        if (newsletterForm.style.display === 'none') {
+          newsletterForm.style.display = 'block';
+        } else {
+          newsletterForm.style.display = 'none';
+        }
+      });
+    </script>
   </body>
 </html>
 
